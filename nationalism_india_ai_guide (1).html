@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nationalism in India — AI History Guide</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4efe6;margin:0;color:#241f1a}
+header{background:#1d2a44;color:white;padding:20px;text-align:center}
+header h1{margin:0;font-size:24px}.tag{margin-top:6px;opacity:.9}
+.wrap{max-width:850px;margin:auto;padding:16px}
+.card{background:white;border-radius:16px;padding:18px;box-shadow:0 4px 18px #0002;margin-bottom:14px}
+#chat{height:430px;overflow:auto;border:1px solid #ddd;border-radius:12px;padding:12px;background:#fafafa}
+.msg{padding:10px 13px;margin:8px 0;border-radius:13px;max-width:82%;line-height:1.45}
+.user{background:#dce9ff;margin-left:auto}.bot{background:#eee9df;margin-right:auto}
+.row{display:flex;gap:8px;margin-top:10px}
+input{flex:1;padding:13px;border:1px solid #bbb;border-radius:10px;font-size:16px}
+button{padding:12px 16px;border:0;border-radius:10px;background:#1d2a44;color:white;font-weight:bold}
+.quick{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.quick button{background:#e7dccb;color:#241f1a;font-weight:normal}
+.small{font-size:12px;color:#666}
+</style>
+</head>
+<body>
+<header>
+<h1>🇮🇳 Nationalism in India — AI History Guide</h1>
+<div class="tag">Class 10 History • Ask questions about the chapter</div>
+</header>
+<div class="wrap">
+<div class="card">
+<div id="chat">
+<div class="msg bot"><b>Namaste! 👋</b><br>I’m your History Guide. Ask me about Nationalism in India — movements, leaders, dates, causes, effects, or important events.</div>
+</div>
+<div class="row">
+<input id="q" placeholder="Ask a question, e.g. What was the Rowlatt Act?" onkeydown="if(event.key==='Enter')ask()">
+<button onclick="ask()">Ask</button>
+</div>
+<div class="quick">
+<button onclick="setQ('What was the Rowlatt Act?')">Rowlatt Act</button>
+<button onclick="setQ('What was the Non-Cooperation Movement?')">Non-Cooperation</button>
+<button onclick="setQ('What was the Dandi March?')">Dandi March</button>
+<button onclick="setQ('Why was the Non-Cooperation Movement withdrawn?')">Why withdrawn?</button>
+<button onclick="setQ('What was the role of women?')">Women</button>
+</div>
+</div>
+<div class="card small">
+<b>Project note:</b> This exhibition demo uses a built-in Class 10 chapter knowledge base, so it works without an API key or internet connection. Content is based on the NCERT Class X History chapter “Nationalism in India.”
+</div>
+</div>
+
+<script>
+const data=[
+{keys:["nationalism"],a:"Nationalism is the feeling of shared identity and belonging to a nation. In India, the growth of nationalism was closely connected with the struggle against colonial rule and with attempts to unite people across different regions and communities."},
+{keys:["rowlatt"],a:"The Rowlatt Act was passed in 1919. It gave the colonial government extensive powers to repress political activities and allowed detention of political prisoners without trial for up to two years. Gandhi organised a nationwide hartal against it."},
+{keys:["jallianwala","bagh"],a:"The Jallianwala Bagh massacre took place on 13 April 1919 in Amritsar. General Dyer ordered troops to fire on a large crowd gathered at Jallianwala Bagh. The event shocked people across India and became an important turning point in the nationalist movement."},
+{keys:["khalifat","khilafat"],a:"The Khilafat issue concerned the position of the Ottoman Sultan, who was regarded by many Muslims as the Khalifa. The Khilafat movement and the Non-Cooperation Movement became closely connected, helping create a broader phase of Hindu-Muslim political cooperation."},
+{keys:["non cooperation","non-cooperation"],a:"Gandhi launched the Non-Cooperation Movement in 1920. It encouraged people to withdraw cooperation from colonial institutions, including government schools, colleges, courts and councils, and to promote swadeshi and boycott of foreign goods."},
+{keys:["chauri","chaura"],a:"The Non-Cooperation Movement was withdrawn in February 1922 after protesters at Chauri Chaura attacked and set fire to a police station, killing policemen. Gandhi felt that the movement had to remain non-violent."},
+{keys:["swaraj"],a:"Swaraj means self-rule. It became a major goal of the Indian nationalist movement, although different groups understood and pursued the idea in different ways."},
+{keys:["civil disobedience"],a:"The Civil Disobedience Movement began in 1930. Unlike Non-Cooperation, it involved not only refusing to cooperate but also deliberately breaking certain colonial laws. The Salt March was its famous opening phase."},
+{keys:["dandi","salt march"],a:"The Dandi March, or Salt March, began on 12 March 1930 from Sabarmati Ashram. Gandhi and his followers marched to the coastal village of Dandi, where Gandhi broke the colonial salt law on 6 April 1930."},
+{keys:["salt law","salt"],a:"The British colonial government imposed a salt law and controlled the production and sale of salt. Salt became a powerful symbol because it was used by rich and poor alike. Gandhi chose it to launch the Civil Disobedience Movement."},
+{keys:["gandhi"],a:"Mahatma Gandhi played a central role in India's nationalist movement. He promoted satyagraha and non-violence and led or inspired major campaigns including Non-Cooperation and Civil Disobedience."},
+{keys:["satyagraha"],a:"Satyagraha means holding firmly to truth. Gandhi used it as a method of non-violent resistance against injustice. It emphasized truth, self-discipline and willingness to accept suffering without using violence."},
+{keys:["simon"],a:"The Simon Commission arrived in India in 1928 to discuss constitutional reforms. It had no Indian member, leading to widespread protests and the slogan 'Simon Go Back.'"},
+{keys:["lahore","1929"],a:"At the Lahore Congress session in December 1929, under the presidency of Jawaharlal Nehru, the Congress adopted the goal of Purna Swaraj, or complete independence. 26 January 1930 was observed as Independence Day."},
+{keys:["quit india","1942"],a:"The Quit India Movement was launched by the Indian National Congress in August 1942 during the Second World War. Gandhi called for an end to British rule, and the movement spread despite the arrest of major leaders."},
+{keys:["women"],a:"Women participated in nationalist activities in many ways, including protests, picketing and participation in civil disobedience. The movement brought many women into public political activity, although social expectations and unequal opportunities continued."},
+{keys:["peasants","peasant"],a:"Peasants participated in different regional movements and sometimes connected their local demands with the wider nationalist struggle. Their experiences and demands were not identical across India."},
+{keys:["tribal","tribals"],a:"Tribal groups participated in movements shaped by local issues such as restrictions on forests, traditional rights and forced labour. Their struggles sometimes developed differently from the mainstream Congress-led movements."},
+{keys:["plantation","workers"],a:"Plantation workers faced restrictions on movement and harsh working conditions. Some participated in nationalist-era resistance, interpreting the call for freedom in relation to their own hopes for greater freedom of movement and better conditions."},
+{keys:["sense of collective belonging","collective belonging"],a:"A sense of collective belonging grew through symbols and images such as Bharat Mata, folklore, songs, history, reinterpretations of the past, and the national flag. These helped create shared national identities."},
+{keys:["bharat mata"],a:"The image of Bharat Mata became a visual symbol of the nation. Abanindranath Tagore's 1905 painting represented Bharat Mata as an ascetic figure, helping give a cultural image to the idea of the motherland."},
+{keys:["first world war","world war i"],a:"The First World War created major economic and political difficulties in India. Taxes increased, prices rose, forced recruitment occurred in some areas, and crop failures contributed to hardship. These conditions helped create discontent with colonial rule."},
+{keys:["independence"],a:"The nationalist movement developed over several decades and included different groups, strategies and movements. The chapter focuses on how mass participation, political mobilisation and resistance to colonial rule contributed to the struggle for independence."}
+];
+
+function answer(q){
+let s=q.toLowerCase().replace(/[?.,!]/g," ").replace(/\s+/g," ").trim();
+if(!s) return "Please type a question.";
+if(s==="hi"||s==="hello"||s==="hey") return "Hello! 👋 Ask me anything about Nationalism in India.";
+let best=null,score=0;
+for(const x of data){
+ let sc=0;
+ for(const k of x.keys) if(s.includes(k)) sc+=k.length>5?3:2;
+ if(sc>score){score=sc;best=x.a;}
+}
+if(best)return best;
+if(s.includes("when")) return "I can answer many date-based questions from this chapter. Try asking about the Rowlatt Act, Jallianwala Bagh, Non-Cooperation Movement, Lahore Congress, Dandi March or Quit India Movement.";
+if(s.includes("why")) return "Try adding the event or movement after 'why', such as 'Why was the Non-Cooperation Movement withdrawn?'";
+return "I’m designed for the Class 10 chapter 'Nationalism in India'. Try asking about a leader, movement, date, cause, effect, or event. For example: 'Why was salt chosen by Gandhi?'";
+}
+function add(text,cls){
+const d=document.createElement("div");d.className="msg "+cls;d.innerHTML=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;
+}
+function ask(){
+const q=document.getElementById("q");const text=q.value.trim();if(!text)return;
+add(text,"user");q.value="";
+setTimeout(()=>add(answer(text),"bot"),250);
+}
+function setQ(t){document.getElementById("q").value=t;ask();}
+</script>
+</body>
+</html>
